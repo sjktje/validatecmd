@@ -68,7 +68,7 @@ main(void)
 		if (p[len] == '\n')
 			p[len] = '\0';
 
-		if (strcmp(ssh_original_command, p) == 0) {
+		if (strcmp(ssh_original_command, p) == 0 || strcmp(p, "*") == 0) {
 			command_ok = 1;
 			break;
 		}
